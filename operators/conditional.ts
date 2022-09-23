@@ -23,6 +23,6 @@ function type (
         console.log("Not all test objects are numbers")
 }
 
-console.log(type(7,9))
 console.log('hi', 8)
+console.log(type(7,9))
 

@@ -32,5 +32,5 @@ function isPerfectSquare2v2 (
     }
 }
 
-console.log(isPerfectSquare2v2(55))
 console.log(isPerfectSquare2v2(25))
+console.log(isPerfectSquare2v2(55))
