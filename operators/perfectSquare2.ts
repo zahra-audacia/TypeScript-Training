@@ -19,11 +19,11 @@ console.log(isPerfectSquare2(25)) //returns false when it should return true als
 
 // importing my mod function and checking that the remainder == 0, return true, else return false 
 import {mod} from "./maths"
-function isPerfectSquare2v2 (
+export function isPerfectSquare2v2 (
     num1:number, 
 ): boolean {
     // mod(num) returns [quotient, remainder]
-    let [qu, rem] = mod(num1**0.5, 1);  // how do i just get the remainder output of my mod function  
+    let [qu, rem] = mod(num1**0.5, 1);   
     if (rem === 0) {
         return true
     }

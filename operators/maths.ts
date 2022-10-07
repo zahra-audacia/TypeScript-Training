@@ -1,6 +1,6 @@
 import { a,b,c,d,e } from "./arithmetic-demos"
 
-function multiply (
+export function multiply (
     number1: number,
     number2: number
 ): number {
@@ -9,7 +9,7 @@ function multiply (
 }
 // console.log(multiply(8,4))
 
-function addition (
+export function addition (
     number3: number,
     number4: number
 ): number {
@@ -18,43 +18,74 @@ function addition (
 }
 // console.log(addition(10,8))
 
-function divison (
+export function subtraction (
+    firstNumber: number, secondNumber:number 
+): number {
+    let result = firstNumber - secondNumber
+    return result 
+}
+
+export function division (
     number5: number,
     number6: number,
 ): number {
     let newnumber3 = number5/number6
     return newnumber3
 }
-// console.log(divison(50,5))
-
-// console.log(addition(a,e))
 
 export function increment (
     number7: number,
 ): number {
-    let newnumber4 = number7++
-    return newnumber4
+    
+     number7++;
+     return number7;
 }
-// console.log(increment(b))
 
-function exponentiation (
+//console.log(increment(5))
+
+export function decrement (
+    number100: number,
+): number {
+    
+     number100--;
+     return number100;
+}
+
+
+export function exponentiation (
     number8: number,
     number9: number,
 ):  number {
-    let newnumber5 = number8**number9
+    let newnumber5 = (number8)**(number9);
     return newnumber5
 }
-// console.log(exponentiation(5,9))
+
 
 export function mod(
     number10: number,
     number11: number,
-): [quotient: number, remainder: number] {
+): [quotient: number, remainder: number] | string {
     let quotient = (number10 /number11) -((number10/number11)%1)
     let remainder = number10 % number11
-    return[quotient, remainder]
+    
+    if (quotient < 0 )
+    {
+        quotient = quotient * (-1);
+    }
+    if (remainder < 0) 
+    {
+        remainder = remainder * (-1);
+    }
+    if (Number.isInteger(number10) && Number.isInteger(number11) && number10 > 0 && number11 > 0)
+    {
+        return[quotient, remainder];
+    }
+    else 
+    {
+        return "numbers have to be positive integers";
+    }
 }
-// to fix: make the quotient not a float but the integer value (so if remainder is equal to 0, this is not necessary)
-// console.log(mod(10,2))
-// console.log(mod(45,4))
-// console.log(mod(4.5,2))
+
+console.log(mod(-25, 5));
+console.log(mod(-4, 0.5));
+console.log(-25 % 0)

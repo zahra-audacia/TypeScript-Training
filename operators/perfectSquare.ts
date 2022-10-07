@@ -1,8 +1,7 @@
-import {increment} from "./maths"
 
 //incrementing every number to see if muliplied by itself gets the inputed number (this works!)
 
-function isPerfectSquare(
+export function isPerfectSquare(
     num:number,
 ): boolean {
     let j = 1;
@@ -19,6 +18,6 @@ function isPerfectSquare(
 }
 
 
-console.log(isPerfectSquare(654))
-console.log(isPerfectSquare(47))
-console.log(isPerfectSquare(25))
+// console.log(isPerfectSquare(654))
+// console.log(isPerfectSquare(47))
+// console.log(isPerfectSquare(25))
